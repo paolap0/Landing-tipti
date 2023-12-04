@@ -1,0 +1,59 @@
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+}
+
+.total{
+     display: grid;
+     gap: 10px;
+
+     grid-template: 
+     "header" 2fr
+     "main" auto
+     "footer" 1fr;
+}
+
+.header{
+    grid-area: header;
+    background-image: url(img/Group\ 288.jpg);
+    
+}
+
+.main{
+    grid-area: main;
+    background-color: white;
+    display: grid;
+    gap: 10px;
+
+    grid-template-areas:
+    "sale" 50%
+    "rent" 50%;
+
+    .sale{
+        grid-area: sale;
+        }
+    
+        .rent{
+        grid-area: rent;
+        }
+}
+
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+
+}
+
+@media (min-width:900px){
+    .total{
+    grid-template: 
+    "header header header" auto
+    "main main" auto
+    "footer footer footer" 70px /
+     50% 50%;
+    }
+}
