@@ -9,36 +9,46 @@ body{
 .total{
      display: grid;
      gap: 10px;
+     background-color: transparent;
 
      grid-template: 
-     "header" 2fr
+     "header" auto
      "main" auto
      "footer" 1fr;
 }
 
 .header{
     grid-area: header;
-    background-image: url(img/Group\ 288.jpg);
+    background-color: transparent;
     
 }
 
+header nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: solid 3px white;
+    align-items: center;
+    color: white;
+    background-color: #0005;
+    padding: 15px;
+  }
+  
+
 .main{
     grid-area: main;
-    background-color: white;
+    background-color: transparent;
     display: grid;
     gap: 10px;
+}
 
-    grid-template-areas:
-    "sale" 50%
-    "rent" 50%;
-
-    .sale{
-        grid-area: sale;
-        }
-    
-        .rent{
-        grid-area: rent;
-        }
+.main #imag-header{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top -300px right 0;
+  overflow-x: hidden;
 }
 
 
